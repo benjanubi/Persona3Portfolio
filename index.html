@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Benjamín Valenzuela, desarrollador de software, con la estética del menú de Persona 3 Reload.">
+  <meta name="theme-color" content="#001a6e">
+  <title>Benjamín Valenzuela — Portafolio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-birthdate="2006-02-16">
+  <a class="skip-link" href="#menu">Saltar al menú</a>
+
+  <div class="stage" id="stage">
+    <!-- ══════════════════════════════════════════════════════════════
+         PANTALLA PRINCIPAL
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="screen screen--main" id="screen-main" aria-label="Menú principal">
+      <div class="screen__bg">
+        <video
+          class="bg-video"
+          id="video-main"
+          src="assets/video/mainscreen.mp4"
+          poster="assets/video/mainscreen-poster.jpg"
+          muted loop playsinline preload="auto"
+          disablepictureinpicture
+          aria-hidden="true"></video>
+        <div class="screen__shade"></div>
+        <div class="screen__grain" aria-hidden="true"></div>
+      </div>
+
+      <div class="hud hud--main">
+        <header class="hud__top">
+          <div class="profile-chip">
+            <span class="profile-chip__value">Benjamín<br>Valenzuela</span>
+            <span class="profile-chip__label">current profile</span>
+          </div>
+
+          <div class="date-chip" aria-label="Fecha actual">
+            <span class="date-chip__day" data-date-day>DOM</span>
+            <span class="date-chip__date" data-date>01 NOV 2026</span>
+            <span class="date-chip__place">San Carlos · CL</span>
+          </div>
+        </header>
+
+        <nav class="menu" id="menu" aria-label="Menú principal" tabindex="-1">
+          <button class="menu__item is-selected" type="button" data-action="about" data-label="Conoce mi perfil" aria-current="true">
+            <span class="menu__text" data-text="Sobre mí">Sobre mí</span>
+          </button>
+          <button class="menu__item" type="button" data-action="github" data-label="Abrir mi perfil de GitHub">
+            <span class="menu__text">GitHub Link</span>
+          </button>
+          <button class="menu__item is-inert" type="button" data-action="redes" data-label="Próximamente" aria-disabled="true">
+            <span class="menu__text">Redes</span>
+          </button>
+          <button class="menu__item is-inert" type="button" data-action="proyectos" data-label="Próximamente" aria-disabled="true">
+            <span class="menu__text">Proyectos</span>
+          </button>
+        </nav>
+
+        <footer class="hud__bottom">
+          <div class="command-panel" aria-live="polite">
+            <p class="command-panel__desc" data-command-desc>Conoce mi perfil</p>
+            <p class="command-panel__label">Command</p>
+            <span class="command-panel__line" aria-hidden="true"></span>
+            <p class="command-panel__keys">
+              <span><kbd>↑</kbd><kbd>↓</kbd> Seleccionar</span>
+              <span><kbd>↵</kbd> Confirmar</span>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         PANTALLA SOBRE MÍ
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="screen screen--about" id="screen-about" aria-label="Sobre mí" aria-hidden="true" tabindex="-1" inert>
+      <div class="screen__bg">
+        <video
+          class="bg-video"
+          id="video-about"
+          src="assets/video/subscreen1.mp4"
+          poster="assets/video/subscreen1-poster.jpg"
+          muted loop playsinline preload="auto"
+          disablepictureinpicture
+          aria-hidden="true"></video>
+        <div class="screen__shade screen__shade--about"></div>
+        <div class="screen__grain" aria-hidden="true"></div>
+      </div>
+
+      <span class="about-watermark" aria-hidden="true">01</span>
+
+      <div class="hud hud--about">
+        <header class="about-head">
+          <p class="about-kicker"><span>Portfolio</span> <i>/</i> 01 — About</p>
+          <h1 class="about-title">Sobre <span class="about-title__accent">mí</span></h1>
+          <p class="about-role">Benjamín Ignacio Valenzuela Muñoz <span>·</span> Desarrollador de software</p>
+        </header>
+
+        <div class="about-rows" role="list" aria-label="Datos del perfil">
+          <div class="about-row about-row--profile" role="listitem" style="--accent:#5ff6ff; --i:0">
+            <span class="about-row__portrait">
+              <img src="assets/pfp.jpg" alt="" width="48" height="48" decoding="async">
+            </span>
+            <span class="about-row__body">
+              <span class="about-row__label">Perfil</span>
+              <span class="about-row__value">Benjamín Valenzuela</span>
+            </span>
+            <span class="about-row__meta">LV. <span data-age>20</span></span>
+          </div>
+
+          <div class="about-row" role="listitem" style="--accent:#f5e642; --i:1">
+            <span class="about-row__body">
+              <span class="about-row__label">Edad</span>
+              <span class="about-row__value"><span data-age>20</span> años</span>
+            </span>
+            <span class="about-row__meta">20</span>
+          </div>
+
+          <div class="about-row" role="listitem" style="--accent:#ff3bd4; --i:2">
+            <span class="about-row__body">
+              <span class="about-row__label">Ubicación</span>
+              <span class="about-row__value">San Carlos, Región de Ñuble</span>
+            </span>
+            <span class="about-row__meta">CL</span>
+          </div>
+
+          <div class="about-row" role="listitem" style="--accent:#b6ff3b; --i:3">
+            <span class="about-row__body">
+              <span class="about-row__label">Formación</span>
+              <span class="about-row__value">Ingeniería Civil en Informática</span>
+            </span>
+            <span class="about-row__meta">UBB</span>
+          </div>
+
+          <div class="about-row" role="listitem" style="--accent:#ff9f1c; --i:4">
+            <span class="about-row__body">
+              <span class="about-row__label">Universidad</span>
+              <span class="about-row__value">UBB · Campus Fernando May, Chillán</span>
+            </span>
+            <span class="about-row__meta">FM</span>
+          </div>
+
+          <div class="about-row" role="listitem" style="--accent:#b28cff; --i:5">
+            <span class="about-row__body">
+              <span class="about-row__label">Experiencia</span>
+              <span class="about-row__value">Ayudante de Álgebra Lineal · Staff de evento</span>
+            </span>
+            <span class="about-row__meta">02</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="about-copy__label" aria-hidden="true">// profile.log</p>
+          <p class="about-copy__lead">Me interesa el desarrollo móvil, las herramientas que resuelven problemas concretos y el ecosistema Linux.</p>
+          <p>Me gusta aprender construyendo: probar, equivocarme, iterar y dejar algo que se sienta útil y cuidado. He sido ayudante de Álgebra Lineal y staff en un evento universitario, experiencias que me enseñaron a explicar, organizar y aprender en equipo.</p>
+          <ul class="about-tags" aria-label="Tecnologías">
+            <li>Flutter</li>
+            <li>Dart</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>Linux</li>
+            <li>Firebase</li>
+          </ul>
+        </div>
+
+        <div class="about-side">
+          <button class="back-button" type="button" data-back>
+            <span aria-hidden="true">←</span> Volver
+          </button>
+        </div>
+
+        <footer class="about-foot">
+          <div class="command-panel command-panel--about">
+            <p class="command-panel__desc">Sobre mí</p>
+            <p class="command-panel__label">Command</p>
+            <span class="command-panel__line" aria-hidden="true"></span>
+            <p class="command-panel__keys">
+              <span><kbd>⌫</kbd> Volver</span>
+              <span><kbd>esc</kbd> Cerrar</span>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Transición circular -->
+    <div class="wipe-ring" aria-hidden="true"></div>
+    <div class="flash" aria-hidden="true"></div>
+
+    <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false" aria-label="Activar sonido">
+      <span class="sound-toggle__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 9.5v5h3.4L12 18V6L7.4 9.5H4z" fill="currentColor" stroke="none"/>
+          <path class="sound-toggle__wave" d="M15.5 8.5a5 5 0 0 1 0 7"/>
+          <path class="sound-toggle__wave" d="M18.2 6a8.6 8.6 0 0 1 0 12"/>
+          <path class="sound-toggle__slash" d="M4 4l16 16"/>
+        </svg>
+      </span>
+      <span class="sound-toggle__text">Sound off</span>
+    </button>
+
+    <noscript>
+      <p class="noscript">Activa JavaScript para navegar el menú y ver la transición.</p>
+    </noscript>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
